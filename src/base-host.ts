@@ -31,7 +31,7 @@ export default class BaseHost {
             
             this.socket.on("new_client", async msg => {
                 const clientId = msg.id;
-                const dataSocket = new Socket(`ws://127.0.0.1:8080/host/${sessionId}/${sessionKey}/${clientId}`, false); // connection to client
+                const dataSocket = new Socket(`${serverAddress}/host/${sessionId}/${sessionKey}/${clientId}`, false); // connection to client
 
                 this.emit("client", dataSocket);
             });
