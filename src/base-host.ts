@@ -24,6 +24,10 @@ export default class BaseHost {
             const sessionId = msg.id as string;
             const sessionKey = msg.key as string;
 
+            setInterval(() => {
+                this.socket.send("keep_alive", {});
+            }, 30_000);
+
             this.emit("session", {
                 id: sessionId,
                 key: sessionKey

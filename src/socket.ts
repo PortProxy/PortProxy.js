@@ -1,7 +1,8 @@
 import WebSocket from "websocket-stream";
 
 export type NodePacketId = (
-    "connection_type"
+    "connection_type" |
+    "keep_alive"
 );
 
 export type ServerPacketId = (

@@ -1,6 +1,6 @@
 {
   "name": "portproxy.js",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "A basic library for bypassing port-forwarding restrictions",
   "main": "dist/index.js",
   "scripts": {
