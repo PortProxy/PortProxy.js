@@ -1,6 +1,6 @@
 {
   "name": "portproxy.js",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "A basic library for bypassing port-forwarding restrictions",
   "main": "dist/index.js",
   "scripts": {
@@ -8,7 +8,9 @@
     "dev": "nodemon",
     "build": "npm run clean && npx tsc --build",
     "clean": "rimraf dist",
-    "package": "npm run build && npm pack"
+    "package": "npm run build && npm pack",
+    "test:client": "node test/client.js",
+    "test:host": "node test/host.js"
   },
   "keywords": [],
   "author": "eyezah",

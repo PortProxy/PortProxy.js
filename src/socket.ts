@@ -94,10 +94,11 @@ export default class Socket {
         if ((message as any).packetId !== undefined) {
             throw "Attempted to send a message to socket that contains a packet id.";
         }
-        this.internal.push(JSON.stringify({
+
+        this.internal.socket.send(JSON.stringify({
             packetId,
             ...message
-        }, null, 2));
+        }));
     }
 
     public close() {
